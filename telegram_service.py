@@ -5,6 +5,7 @@ from telethon.sync import TelegramClient
 from telethon.tl.custom import Dialog
 from progress.bar import Bar
 
+import config
 from config import TELEGRAM_SESSION_NAME, TELEGRAM_API_HASH, TELEGRAM_API_ID
 
 
@@ -50,7 +51,7 @@ def reply_to_unread_messages():
                 for dialog in unread_dialogs:
                     print(datetime.datetime.now())
                     progress_bar.next()
-                    __reply(dialog, 'test_reply')
+                    __reply(dialog, config.MESSAGE)
                     replied_dialogs.append(dialog.id)
         except Exception as e:
             pass
