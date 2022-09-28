@@ -49,7 +49,6 @@ def reply_to_unread_messages():
         try:
             with Bar('Replying', max=len(unread_dialogs)) as progress_bar:
                 for dialog in unread_dialogs:
-                    print(datetime.datetime.now())
                     progress_bar.next()
                     __reply(dialog, config.MESSAGE)
                     replied_dialogs.append(dialog.id)
