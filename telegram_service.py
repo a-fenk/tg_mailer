@@ -56,7 +56,7 @@ def reply_to_unread_messages():
                         print('\n')
                         logger.error(e)
                         logger.info(f'attempt {attempt+1}/10 failed')
-                        sleep(2)
+                        sleep(30)
                 if not is_sent:
                     logger.warning('failed to send a message, going to the next dialog.')
 
