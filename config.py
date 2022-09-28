@@ -1,3 +1,5 @@
+import logging
+
 TELEGRAM_SESSION_NAME = 'telegram'
 TELEGRAM_API_ID = 12274943
 TELEGRAM_API_HASH = '7c3b20e1f1fc3910121f9f6ffb53f777'
@@ -12,3 +14,14 @@ MESSAGE = '''
 
 🕊
 '''
+
+
+log_format = '%(asctime)s [%(threadName)s] [%(name)s] [%(levelname)s] %(message)s'
+
+logging.basicConfig(
+    level=logging.INFO,
+    format=log_format,
+    handlers=[
+        logging.StreamHandler()
+    ]
+)

@@ -6,5 +6,11 @@ how to run script?
    python3 -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
-   python3 main.py
+    ```
+4. ```shell
+   python3 mark_as_readed.py
+    ``` 
+   OR 
+    ```shell
+   python3 send_auto_replies.py
     ```
